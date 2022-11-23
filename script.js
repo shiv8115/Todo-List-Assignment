@@ -1,13 +1,15 @@
-document.querySelector('#push').onclick = function(){
-    if(document.querySelector('#newtask input').value.length == 0){
+
+function addTask(){
+    var todoText= document.getElementById("input").value;
+    if(todoText.length == 0){
         alert("Kindly Enter valid Task!!")
     }
 
     else{
-        document.querySelector('#tasks').innerHTML += `
+        document.getElementById("tasks").innerHTML += `
             <div class="task">
                 <span id="taskname">
-                    ${document.querySelector('#newtask input').value}
+                    ${todoText}
                 </span>
                 <button class="delete">
                     <i class="far fa-trash-alt"></i>
